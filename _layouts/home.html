@@ -5,23 +5,10 @@ layout: default
 <div>
 
   {{ content }}
-  <div>
-    <pre>
-        site: {{ site | jsonify | escape }}
-        page: {{ page | jsonify | escape }}
-        layout: {{ layout | jsonify | escape }}
-        github: {{ site.github | jsonify | escape }}
-        content: {{ content | jsonify | escape }}
-        paginator: {{ paginator | jsonify | escape }}
-        page_refs: {{  page_refs | jsonify | escape }}
-        footer_page_refs : {{ site.footer_page_refs | jsonify | escape }}
-    </pre>
-  </div>
   <!--
   <h2>Latest Posts</h2>
 
   <div>&nbsp;</div>
-
   <ul class="post-list">
     {% for post in site.posts %}
     <li>
