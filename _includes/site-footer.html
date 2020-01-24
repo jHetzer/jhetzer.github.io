@@ -2,6 +2,7 @@
   {% assign page_footer = site.footer_page_refs %}
 
   <!-- Github icon -->
+  {% if site.github.enable %}
   <span class="my-span-icon">
     <a href="{{ site.github.owner_url }}" aria-label="{{ site.github.owner_name }}'s GitHub" title="{{ site.github.owner_name }}'s GitHub">
       <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -10,8 +11,10 @@
       </svg>
     </a>
   </span>
+  {% endif %}
 
   <!-- Twitter icon -->
+  {% if site.twitter.username %}
   <span class="my-span-icon">
     <a href="https://twitter.com/{{ site.twitter.username }}" aria-label="{{ site.github.owner_name }}'s Twitter" title="{{ site.github.owner_name }}'s Twitter">
       <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -20,6 +23,7 @@
       </svg>
     </a>
   </span>
+  {% endif %}
 
   <!-- RSS icon -->
   {% if site.plugins contains "jekyll-feed" %}
