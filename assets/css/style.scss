@@ -2,3 +2,33 @@
 ---
 
 @import 'jekyll-theme-cayman-blog';
+
+
+/**
+ * footer-links
+ */
+.footer-links{
+  float: right;
+  display: flex;
+}
+
+.footer-link-item{
+  padding-left: 20px;
+}
+
+.footer-copyright{
+  text-align: center;
+}
+
+.site-header-custom{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 600;
+    border-bottom: none;
+}
+
+.project-name, .project-tagline, .menu-nav, .site-title{
+    color: #303030 !important;
+}

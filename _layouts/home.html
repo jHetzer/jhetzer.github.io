@@ -5,26 +5,39 @@ layout: default
 <div>
 
   {{ content }}
-
+  <div>
+    <pre>
+        site: {{ site | jsonify | escape }}
+        page: {{ page | jsonify | escape }}
+        layout: {{ layout | jsonify | escape }}
+        github: {{ site.github | jsonify | escape }}
+        content: {{ content | jsonify | escape }}
+        paginator: {{ paginator | jsonify | escape }}
+        page_refs: {{  page_refs | jsonify | escape }}
+        footer_page_refs : {{ site.footer_page_refs | jsonify | escape }}
+    </pre>
+  </div>
+  <!--
   <h2>Latest Posts</h2>
 
   <div>&nbsp;</div>
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
+    <li>
 
-        {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+      {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
-        </h2>
+      <h2>
+        <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+      </h2>
 
-        {{ post.excerpt | markdownify | truncatewords: 30 }}
+      {{ post.excerpt | markdownify | truncatewords: 30 }}
 
-      </li>
+    </li>
     {% endfor %}
   </ul>
+  -->
 
 </div>
